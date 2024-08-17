@@ -2110,24 +2110,3 @@ a.button:hover {
   color: #fff;
 }
   
-
-/* 手機 */
-@media (min-width: 600px) {
-  
-  .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-  img {
-    max-width: 100%;
-  }
-}
-
-
-/* 桌面 */
-@media (min-width: px) {
-  
-  .container {
-    padding: 30px;
-  }
-}
