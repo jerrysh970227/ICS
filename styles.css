@@ -2112,7 +2112,7 @@ a.button:hover {
   
 
 /* 手機 */
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   
   .container {
     flex-direction: column;
