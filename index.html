@@ -1,231 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>資安社網站</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-  <div class="container">
-    <nav class="sidebar">
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-lg-2 sidebar">
         <div class="img">
-            <img src="OIG3.jpg" title="帥啊~~" class="img1">
+          <img src="OIG3.jpg" title="帥啊~~" class="img1">
         </div>
         
-      <h2 class="hi">資安社</h2>
-      <div class="color-change">
-        <ul>  
-          <a href="index.html" class="button">首頁</a>
-          <a href="instructors.html" class="button" onclick="loadPage('instructors.html')">講師資訊</a>
-          <a href="courses.html" class="button" onclick="loadPage('courses.html')">課程管理</a>
-          <a href="forum.html" class="button" onclick="loadPage('forum.html')">討論區</a>
-          <a href="calendar.html" class="button" onclick="loadPage('calendar.html')">行事曆</a>
-          
-          
-          <!-- <a href="home.html" class="button" >首頁</a>  
-          <a href="instructors.html" class="button" >講師資訊</a>
-          <a href="courses.html" class="button" >課程管理</a>
-          <a href="forum.html" class="button" >討論區</a>
-          <a href="calendar.html" class="button" >行事曆</a> -->
-            <!-- <li><a href="#home" >首頁</a></li>
-            <li><a href="#instructors">講師資訊</a></li>
-            <li><a href="#courses">課程管理</a></li>
-            <li><a href="#forum">討論區</a></li>
-            <li><a href="#calendar">行事曆</a></li> -->
+        <div class="hi"><h2>資安社</h2></div>
+        <div class="color-change">
+          <ul>  
+            <li><a href="index.html" class="button">首頁</a></li>
+            <li><a href="instructors.html" class="button">講師資訊</a></li>
+            <li><a href="courses.html" class="button">課程管理</a></li>
+            <li><a href="forum.html" class="button">討論區</a></li>
+            <li><a href="calendar.html" class="button">行事曆</a></li>
           </ul>
-      </div> 
-    </nav>
-    
-    <main class="main-content">
-      <section id="home">
-        <h2 class="f1">歡迎來到資安社</h2>
-        <p class="f2">這裡是資安技術愛好者的聚集地，提供豐富的資安課程和討論區。</p>
-      </section>
-      <ul class="Social-media" id="pop-up">
-
-        <li id="Facebook"><!--FACEBOOK-->
+        </div>
+        <div class="card">
+          <div class="card__content">
+            <p>目前位置:首頁</p>
+          </div>
+        </div>
+      </nav>
+      
+      <main class="col-md-9 col-lg-10 main-content">
+        <ul class="Social-media" id="pop-up">
+          <li id="Facebook">
             <div id="facebook-tooltip-container">
-                <div id="facebook-tooltip">
-                    <div id="facebook-profile">
-                        <div id="facebook-user">
-                            <div id="facebook-img">Fb</div>
-                                <div id="facebook-details">
-                                    <div id="facebook-name">成大南工資安社</div>
-                                    <div id="facebook-username"></div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="text">
-                    <a id="facebook-icon" href="https://www.facebook.com/NTIHSweb" target="_blank">
-                        <div id="facebook-layer">
-                            <span></span>  
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span id="facebookSVG">
-                                <svg viewBox="0 0 40 40" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-                                    <linearGradient gradientUnits="userSpaceOnUse" gradientTransform="matrix(40 0 0 -39.7778 11115.001 16212.334)" y2="407.5726" y1="406.6018" x2="-277.375" x1="-277.375" id="a">
-                                        <stop stop-color="#0062e0" offset="0"></stop>
-                                        <stop stop-color="#19afff" offset="1"></stop>
-                                    </linearGradient>
-                                    <path d="M16.7 39.8C7.2 38.1 0 29.9 0 20 0 9 9 0 20 0s20 9 20 20c0 9.9-7.2 18.1-16.7 19.8l-1.1-.9h-4.4l-1.1.9z" fill="url(#a)"></path>
-                                    <path d="m27.8 25.6.9-5.6h-5.3v-3.9c0-1.6.6-2.8 3-2.8H29V8.2c-1.4-.2-3-.4-4.4-.4-4.6 0-7.8 2.8-7.8 7.8V20h-5v5.6h5v14.1c1.1.2 2.2.3 3.3.3 1.1 0 2.2-.1 3.3-.3V25.6h4.4z" fill="#fff"></path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="text">Facebook</div>
-                    </a>
-                </div>
-            </div>
-        </li>
-    
-        <li id="Instagram"><!--INSTAGRAM-->
-            <div id="instagram-tooltip-container">
-                <div id="instagram-tooltip">
-                    <div id="instagram-profile">
-                        <div id="instagram-user">
-                            <div id="instagram-img">Ui</div>
-                            <div id="instagram-details">
-                                <div id="instagram-name">User</div>
-                                <div id="instagram-username">@username</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text">
-                    <a id="instagram-icon" href="#" target="_blank">
-                        <div id="instagram-layer">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span id="instagramSVG">
-                                <svg fill="white" id="svgIcon" viewBox="0 0 448 512" height="1.5em" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="text">Instagram</div>
-                    </a>
-                </div>
-            </div>
-        </li>
-    
-        <li id="Twitter-X"><!-- TWITTER X -->
-            <div id="twitter-x-tooltip-container">
-                <div id="twitter-x-tooltip">
-                    <div id="twitter-x-profile">
-                        <div id="twitter-x-user">
-                            <div id="twitter-x-img">ID</div>
-                            <div id="twitter-x-details">
-                                <div id="twitter-x-name">User</div>
-                                <div id="twitter-x-username">@username</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="x-text">
-                    <a id="twitter-x-icon" href="#" target="_blank">
-                        <div id="twitter-x-layer">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span id="twitter-xSVG">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                                    <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="text">Twitter X</div>
-                    </a>
-                </div>
-            </div>
-        </li>
-        
-        <li id="GitHub"><!-- GITHUB -->
-            <div id="github-tooltip-container">
-                <div id="github-tooltip">
-                    <div id="github-profile">
-                        <div id="github-user">
-                            <div id="github-img">GH</div>
-                                <div id="github-details">
-                                    <div id="github-name">User</div>
-                                    <div id="github-username">@username</div>
-                                </div>
-                            </div>
-                        
-                    </div>
-                </div>
-                <div class="text">
-                    <a id="github-icon" href="#" target="_blank">
-                        <div id="github-layer">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span id="githubSVG">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="text">GitHub</div>
-                    </a>
-                </div>
-            </div>
-        </li>
-    
-        <li id="linkedIN"><!--LINKEDIN-->
-            <div id="linkedin-tooltip-container">
-                <div id="linkedin-tooltip">
-                  <div id="linkedin-profile">
-                    <div id="linkedin-user">
-                      <div id="linkedin-img">Ui</div>
-                      <div id="linkedin-details">
-                        <div id="linkedin-name">User</div>
-                        <div id="linkedin-username">@username</div>
-                      </div>
-                    </div>
+              <div id="facebook-tooltip">
+                  <div id="facebook-profile">
+                      <div id="facebook-user">
+                          <div id="facebook-img">Fb</div>
+                              <div id="facebook-details">
+                                  <div id="facebook-name">owo</div>
+                                  <div id="facebook-username">meow</div>
+                              </div>
+                          </div>
                   </div>
-                </div>
-                <div class="text">
-                  <a id="linkedin-icon" href="#" target="_blank">
-                    <div id="linkedin-layer">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span id="linkedinSVG">
-                        <svg viewBox="0 0 448 512" height="1em">
-                          <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
-                        </svg>
-                      </span>
-                    </div>
-                    <div class="text">LinkedIn</div>
+              </div>
+              <div class="text">
+                  <a id="facebook-icon" href="https://www.facebook.com/NTIHSweb" target="_blank">
+                      <div id="facebook-layer">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span id="facebookSVG">
+                              <svg viewBox="0 0 40 40" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                  <linearGradient gradientUnits="userSpaceOnUse" gradientTransform="matrix(40 0 0 -39.7778 11115.001 16212.334)" y2="407.5726" y1="406.6018" x2="-277.375" x1="-277.375" id="a">
+                                      <stop stop-color="#0062e0" offset="0"></stop>
+                                      <stop stop-color="#19afff" offset="1"></stop>
+                                  </linearGradient>
+                                  <path d="M16.7 39.8C7.2 38.1 0 29.9 0 20 0 9 9 0 20 0s20 9 20 20c0 9.9-7.2 18.1-16.7 19.8l-1.1-.9h-4.4l-1.1.9z" fill="url(#a)"></path>
+                                  <path d="m27.8 25.6.9-5.6h-5.3v-3.9c0-1.6.6-2.8 3-2.8H29V8.2c-1.4-.2-3-.4-4.4-.4-4.6 0-7.8 2.8-7.8 7.8V20h-5v5.6h5v14.1c1.1.2 2.2.3 3.3.3 1.1 0 2.2-.1 3.3-.3V25.6h4.4z" fill="#fff"></path>
+                              </svg>
+                          </span>
+                      </div>
+                      <div class="text">Facebook</div>
                   </a>
-                </div>
-              </div>              
-        </li>
-    </ul>
-      
-      
-      </section>
-    </main>
+              </div>
+          </div>
+          </li>
+        </ul>
+
+        
+        </div>
+      </main>
+    </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
-  <script>
-    function loadPage(page) {
-        fetch(page)
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('content').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading page:', error));
-    }
-</script>
 </body>
 </html>
