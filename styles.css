@@ -76,7 +76,7 @@ body {
   margin-bottom: 0.9375rem;
 }
 
-/* 按鈕樣式 */
+
 a.button {
   display: block;
   font-size: 1rem;
@@ -160,7 +160,7 @@ a.button:hover {
   justify-content: flex-start;
 }
 
-/* 社交媒體彈出樣式 */
+
 .Social-media#pop-up {
   position: relative;
   display: flex; 
@@ -441,7 +441,7 @@ a.button:hover {
   }
 
   .hi h2 {
-    font-size: 1.1rem;
+    font-size: 3rem;
   }
 
   a.button {
