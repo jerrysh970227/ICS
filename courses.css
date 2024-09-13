@@ -76,7 +76,7 @@ body {
   margin-bottom: 0.9375rem;
 }
 
-/* 按鈕樣式 */
+
 a.button {
   display: block;
   font-size: 1rem;
@@ -152,14 +152,251 @@ a.button:hover {
 .main-content {
   padding: 1.25rem;
   box-sizing: border-box;
-  background-color: antiquewhite;
+  background-color: #9EA3B0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  /* flex-direction: column; */
+  align-items: start;
+  justify-content: center;
+  gap: 90px;
 }
 
+
+.burger {
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  .inside {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+.card1 {
+  display: flex;
+  overflow: visible;
+  width: 190px;
+  height: 254px;
+}
+
+.content1 {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front, .back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card1:hover .content1 {
+  transform: rotateY(180deg);
+}
+
+
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+/* .front-content .badge:not(:last-child) {
+  margin-right: 10px; 
+} */
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 11px;
+  max-width: 100%;
+  justify-content: space-between;
+}
+
+.title p {
+  width: 50%;
+}
+
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+#SVGRepo_iconCarrier img{
+  border-radius: 50%;
+}
+
+.card1 img{
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
 
 @media (max-width: 1200px) {
   body {
@@ -167,7 +404,7 @@ a.button:hover {
   }
 
   .hi h2 {
-    font-size: 2rem;
+    font-sze: 2rem;
   }
 
   a.button {
@@ -183,6 +420,15 @@ a.button:hover {
   }
 }
 
+@media (max-width: 1000px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
 @media (max-width: 992px) {
   .sidebar {
     min-height: auto;
@@ -193,9 +439,6 @@ a.button:hover {
     font-size: 0.875rem;
     padding: 0.6em 4em;
     min-width: 7em; 
-  }
-  .main-content {
-    min-height: auto;
   }
 
 
@@ -208,7 +451,7 @@ a.button:hover {
 
 @media (max-width: 768px) {
   .hi h2 {
-    font-size: 1.3rem;
+    font-size: 3rem;
   }
 
   a.button {
@@ -226,6 +469,46 @@ a.button:hover {
     height: 162px;
     margin-top: 0.75rem;
   }
+
+  .color-change{
+    display: none;
+  }
+
+  .color-change.show{
+    display: flex;
+  }
+
+
+  /* .color-change {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+  }
+
+  .color-change.show {
+    transform: scaleY(1);
+  } */
+
+
+  /* .color-change {
+    animation: 1s close-color-change;
+    transition-duration: 0 display;
+    display: none;
+  }
+
+  .color-change.show {
+    animation: 1s open-color-change;
+    transition-duration: 0.6s display;
+    display: flex;
+  } */
+
+  .burger {
+    display: block;
+  }
+ 
+  main{
+    height: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -234,7 +517,7 @@ a.button:hover {
   }
 
   .hi h2 {
-    font-size: 1.1rem;
+    font-size: 3rem;
   }
 
   a.button {
@@ -243,10 +526,72 @@ a.button:hover {
     min-width: 5em; 
   }
 
-
   .card {
     width: 100px;
     height: 135px;
     margin-top: 0.5rem;
   }
 }
+
+
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes close-color-change {
+	0% {
+		display: flex;
+		transform: scaleY(1);
+		transform-origin: top;
+	}
+
+	80% {
+		transform: scaleY(0);
+	}
+
+	100% {
+		display: none;
+    transform: scaleY(0);
+	}
+}
+
+
+
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+
+
+/* 
+@keyframes open-color-change {
+	0% {
+		display: flex;
+		transform: scaleY(0);
+		transform-origin: top;
+	}
+
+	80% {
+		transform: scaleY(1);
+	}
+} */

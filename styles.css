@@ -18,11 +18,11 @@ body {
   color: white;
   padding: 1.25rem;
   box-sizing: border-box;
-  border-radius: 0 0.9375rem 0.9375rem 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  backdrop-filter:blur(10px);
 }
 
 .img {
@@ -152,7 +152,7 @@ a.button:hover {
 .main-content {
   padding: 1.25rem;
   box-sizing: border-box;
-  background-color: antiquewhite;
+  background-color: #9EA3B0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -465,9 +465,6 @@ a.button:hover {
     padding: 0.6em 4em;
     min-width: 7em; 
   }
-  .main-content {
-    min-height: auto;
-  }
 
   .Social-media#pop-up {
     position: static;
@@ -484,7 +481,7 @@ a.button:hover {
 
 @media (max-width: 768px) {
   .hi h2 {
-    font-size: 1.3rem;
+    font-size: 3rem;
   }
 
   a.button {
@@ -498,11 +495,28 @@ a.button:hover {
   }
 
   .card {
-    width: 120px;
+    width: 190px;
     height: 162px;
     margin-top: 0.75rem;
   }
 
+  .card__content p {
+    color: #00DDEB;
+    text-align: center;
+    display: flex;      
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;      
+  }
+
+
+  .color-change{
+    display: none;
+  }
+
+  .color-change.show{
+    display: flex;
+  }
   /* .color-change {
     transform: scaleY(0);
     transform-origin: top;
@@ -513,17 +527,25 @@ a.button:hover {
     transform: scaleY(1);
   } */
 
-
-  .color-change {
+/* ------------------------------------------ */
+  /* .color-change {
+    animation: 1s close-color-change;
+    transition-duration: 0 display;
     display: none;
   }
 
   .color-change.show {
+    animation: 1s open-color-change;
+    transition-duration: 0.6s display;
     display: flex;
-  }
+  } */
 
   .burger {
     display: block;
+  }
+ 
+  main{
+    height: 100%;
   }
 }
 
@@ -566,8 +588,37 @@ a.button:hover {
   }
 
   .card {
-    width: 100px;
+    width: 150px;
     height: 135px;
     margin-top: 0.5rem;
   }
 }
+/* 動畫
+@keyframes close-color-change {
+	0% {
+		display: flex;
+		transform: scaleY(1);
+		transform-origin: top;
+	}
+
+	80% {
+		transform: scaleY(0);
+	}
+
+	100% {
+		display: none;
+    transform: scaleY(0);
+	}
+}
+
+@keyframes open-color-change {
+	0% {
+		display: flex;
+		transform: scaleY(0);
+		transform-origin: top;
+	}
+
+	80% {
+		transform: scaleY(1);
+	}
+} */

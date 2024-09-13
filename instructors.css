@@ -76,7 +76,7 @@ body {
   margin-bottom: 0.9375rem;
 }
 
-/* 按鈕樣式 */
+
 a.button {
   display: block;
   font-size: 1rem;
@@ -152,7 +152,7 @@ a.button:hover {
 .main-content {
   padding: 1.25rem;
   box-sizing: border-box;
-  background-color: antiquewhite;
+  background-color: #9EA3B0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -160,6 +160,75 @@ a.button:hover {
   justify-content: flex-start;
 }
 
+
+.burger {
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  .inside {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
 
 @media (max-width: 1200px) {
   body {
@@ -194,9 +263,6 @@ a.button:hover {
     padding: 0.6em 4em;
     min-width: 7em; 
   }
-  .main-content {
-    min-height: auto;
-  }
 
 
   .card {
@@ -208,7 +274,7 @@ a.button:hover {
 
 @media (max-width: 768px) {
   .hi h2 {
-    font-size: 1.3rem;
+    font-size: 3rem;
   }
 
   a.button {
@@ -226,6 +292,37 @@ a.button:hover {
     height: 162px;
     margin-top: 0.75rem;
   }
+
+  /* .color-change {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+  }
+
+  .color-change.show {
+    transform: scaleY(1);
+  } */
+
+
+  .color-change {
+    animation: 1s close-color-change;
+    transition-duration: 0 display;
+    display: none;
+  }
+
+  .color-change.show {
+    animation: 1s open-color-change;
+    transition-duration: 0.6s display;
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+ 
+  main{
+    height: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -234,7 +331,7 @@ a.button:hover {
   }
 
   .hi h2 {
-    font-size: 1.1rem;
+    font-size: 3rem;
   }
 
   a.button {
@@ -243,10 +340,38 @@ a.button:hover {
     min-width: 5em; 
   }
 
-
   .card {
     width: 100px;
     height: 135px;
     margin-top: 0.5rem;
   }
+}
+
+@keyframes close-color-change {
+	0% {
+		display: flex;
+		transform: scaleY(1);
+		transform-origin: top;
+	}
+
+	80% {
+		transform: scaleY(0);
+	}
+
+	100% {
+		display: none;
+    transform: scaleY(0);
+	}
+}
+
+@keyframes open-color-change {
+	0% {
+		display: flex;
+		transform: scaleY(0);
+		transform-origin: top;
+	}
+
+	80% {
+		transform: scaleY(1);
+	}
 }
