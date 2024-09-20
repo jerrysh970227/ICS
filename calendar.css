@@ -18,7 +18,6 @@ body {
   color: white;
   padding: 1.25rem;
   box-sizing: border-box;
-  border-radius: 0 0.9375rem 0.9375rem 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -230,6 +229,92 @@ a.button:hover {
   left: 5px;
 }
 
+
+table {
+  border: none;
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #999;
+}
+
+th, td {
+  border: 1px solid #605f5f;  
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+th {
+  background-color: #616161; 
+  font-weight: bold;
+}
+
+tr {
+  background-color: #999;
+  transition: all 0.3s ease;
+}
+
+tbody {
+  position: relative;
+  z-index: 1;
+}
+
+tbody tr {
+  transform-origin: center left;
+}
+
+tbody tr:hover {
+  background-color: gold;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+  z-index: 2;
+}
+
+tbody tr:hover td {
+  border-radius: 0;
+}
+
+tbody tr:hover td:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+tbody tr:hover td:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+thead {
+  background-color: #ddd;
+  border-bottom: 2px solid #999; 
+  position: relative;
+  z-index: 3;
+}
+
+thead tr:hover {
+  transform: none;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 20px;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 20px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+
 @media (max-width: 1200px) {
   body {
     font-size: 14px;
@@ -248,7 +333,6 @@ a.button:hover {
   .card {
     width: 160px;
     height: 214px;
-    margin-top: 1.5rem;
   }
 }
 
@@ -268,7 +352,6 @@ a.button:hover {
   .card {
     width: 140px;
     height: 188px;
-    margin-top: 1rem;
   } 
 }
 
@@ -290,7 +373,6 @@ a.button:hover {
   .card {
     width: 120px;
     height: 162px;
-    margin-top: 0.75rem;
   }
 
   /* .color-change {

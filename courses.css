@@ -18,7 +18,6 @@ body {
   color: white;
   padding: 1.25rem;
   box-sizing: border-box;
-  border-radius: 0 0.9375rem 0.9375rem 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -50,8 +49,9 @@ body {
   width: 100%;
   margin-bottom: 1.25rem;
   background-image: url("images.jpg");
-  background-size: 50%;
+  /* background-size: auto; */
   background-clip: text;
+  background-position: center;
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
@@ -85,7 +85,7 @@ a.button {
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
-  padding: 0.8em 4em; 
+  padding: 0.8em 3em; 
   border: 0.125rem solid gold;
   color: gold; 
   font-weight: bold;
@@ -124,7 +124,6 @@ a.button:hover {
   padding: 5px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-  margin-top: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 30%;
 }
@@ -138,7 +137,7 @@ a.button:hover {
   justify-content: center;
   align-items: center;
   color: gold; 
-  padding: 10px;
+  padding: 6px;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
 }
@@ -147,12 +146,12 @@ a.button:hover {
 .card__content p{
   color: rgb(0, 166, 255);
   font-weight: 600;
+  margin: 0;
 }
 
 .main-content {
   padding: 1.25rem;
   box-sizing: border-box;
-  background-color: #9EA3B0;
   min-height: 100vh;
   display: flex;
   /* flex-direction: column; */
@@ -403,21 +402,25 @@ a.button:hover {
     font-size: 14px;
   }
 
+  .main-content{
+    gap: 30px;
+  }
+
   .hi h2 {
-    font-sze: 2rem;
+    font-size: 2.8rem;
   }
 
   a.button {
     font-size: 0.9rem;
-    padding: 0.7em 4em; 
+    padding: 0.7em 2.8em; 
     min-width: 8em;
   }
 
   .card {
     width: 160px;
     height: 214px;
-    margin-top: 1.5rem;
   }
+
 }
 
 @media (max-width: 1000px) {
@@ -437,7 +440,7 @@ a.button:hover {
 
   a.button {
     font-size: 0.875rem;
-    padding: 0.6em 4em;
+    padding: 0.6em 3em;
     min-width: 7em; 
   }
 
@@ -450,13 +453,20 @@ a.button:hover {
 }
 
 @media (max-width: 768px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
   .hi h2 {
     font-size: 3rem;
   }
 
   a.button {
     font-size: 0.75rem;
-    padding: 0.5em 4em; 
+    padding: 0.5em 3em; 
     min-width: 6em;
   }
 
@@ -506,8 +516,12 @@ a.button:hover {
     display: block;
   }
  
-  main{
-    height: 100%;
+  .card1 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;     
+    margin-top: 20px; 
   }
 }
 
@@ -522,7 +536,7 @@ a.button:hover {
 
   a.button {
     font-size: 0.75rem;
-    padding: 0.5em 4em; 
+    padding: 0.5em 3em; 
     min-width: 5em; 
   }
 
