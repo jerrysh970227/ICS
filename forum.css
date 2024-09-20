@@ -363,6 +363,10 @@ h1 {
     padding: 0.7em 4em; 
     min-width: 8em;
   }
+  .message-input, .reply-input {
+    width: 100%;
+    max-width: 600px;
+  }
 
   /* .card {
     width: 160px;
@@ -382,7 +386,12 @@ h1 {
     padding: 0.6em 4em;
     min-width: 7em; 
   }
-
+  .message-input{
+    width: 10rem;
+  }
+  .message-input, .reply-input {
+    max-width: 500px;
+  }
 
 }
 
@@ -418,6 +427,19 @@ h1 {
   .burger {
     display: block;
   }
+
+  .message-input, .reply-input {
+    max-width: 100%;
+  }
+
+  .message-container, .reply-container {
+    padding: 15px;
+  }
+
+  .reply-container {
+    margin-left: 20px;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -433,6 +455,18 @@ h1 {
     font-size: 0.75rem;
     padding: 0.5em 4em; 
     min-width: 5em; 
+
+  }
+
+  .preview-image {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .preview-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
   }
 
   /* .card {
@@ -470,3 +504,7 @@ h1 {
     transform: scaleY(1);
   }
 } */
+
+.sidebar, .main-content, .message-input, .reply-input, .message-container, .reply-container {
+  transition: all 0.3s ease-in-out;
+}
